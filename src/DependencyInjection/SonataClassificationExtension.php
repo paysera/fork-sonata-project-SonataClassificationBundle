@@ -139,9 +139,9 @@ class SonataClassificationExtension extends Extension
             'inversedBy' => 'children',
             'joinColumns' => [
                 [
-                 'name' => 'parent_id',
-                 'referencedColumnName' => 'id',
-                 'onDelete' => 'CASCADE',
+                    'name' => 'parent_id',
+                    'referencedColumnName' => 'id',
+                    'onDelete' => 'CASCADE',
                 ],
             ],
             'orphanRemoval' => false,
@@ -202,7 +202,7 @@ class SonataClassificationExtension extends Extension
 
         $collector->addUnique($config['class']['collection'], 'tag_collection', ['slug', 'context']);
 
-        if (interface_exists(MediaInterface::class)) {
+        if (null !== $config['class']['media']) {
             $collector->addAssociation($config['class']['collection'], 'mapManyToOne', [
                 'fieldName' => 'media',
                 'targetEntity' => $config['class']['media'],
@@ -213,9 +213,9 @@ class SonataClassificationExtension extends Extension
                 'inversedBy' => null,
                 'joinColumns' => [
                     [
-                     'name' => 'media_id',
-                     'referencedColumnName' => 'id',
-                     'onDelete' => 'SET NULL',
+                        'name' => 'media_id',
+                        'referencedColumnName' => 'id',
+                        'onDelete' => 'SET NULL',
                     ],
                 ],
                 'orphanRemoval' => false,
@@ -231,9 +231,9 @@ class SonataClassificationExtension extends Extension
                 'inversedBy' => null,
                 'joinColumns' => [
                     [
-                     'name' => 'media_id',
-                     'referencedColumnName' => 'id',
-                     'onDelete' => 'SET NULL',
+                        'name' => 'media_id',
+                        'referencedColumnName' => 'id',
+                        'onDelete' => 'SET NULL',
                     ],
                 ],
                 'orphanRemoval' => false,

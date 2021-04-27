@@ -12,7 +12,6 @@
 namespace Sonata\ClassificationBundle\Model;
 
 use Doctrine\Common\Collections\Collection as DoctrineCollection;
-use Sonata\MediaBundle\Model\MediaInterface;
 
 interface CategoryInterface
 {
@@ -126,10 +125,7 @@ interface CategoryInterface
      */
     public function getParent();
 
-    /**
-     * @param MediaInterface $media
-     */
-    public function setMedia(MediaInterface $media = null);
+    public function setMedia($media = null);
 
     /**
      * @return MediaInterface

@@ -13,7 +13,6 @@ namespace Sonata\ClassificationBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection as DoctrineCollection;
-use Sonata\MediaBundle\Model\MediaInterface;
 
 abstract class Category implements CategoryInterface
 {
@@ -307,7 +306,7 @@ abstract class Category implements CategoryInterface
     /**
      * {@inheritdoc}
      */
-    public function setMedia(MediaInterface $media = null)
+    public function setMedia($media = null)
     {
         $this->media = $media;
     }

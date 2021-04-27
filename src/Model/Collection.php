@@ -11,8 +11,6 @@
 
 namespace Sonata\ClassificationBundle\Model;
 
-use Sonata\MediaBundle\Model\MediaInterface;
-
 abstract class Collection implements CollectionInterface
 {
     /**
@@ -175,14 +173,11 @@ abstract class Collection implements CollectionInterface
     /**
      * {@inheritdoc}
      */
-    public function setMedia(MediaInterface $media = null)
+    public function setMedia($media = null)
     {
         $this->media = $media;
     }
 
-    /**
-     * @return MediaInterface
-     */
     public function getMedia()
     {
         return $this->media;
