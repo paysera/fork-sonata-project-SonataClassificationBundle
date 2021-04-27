@@ -1,5 +1,5 @@
 {
-    "name": "sonata-project/classification-bundle",
+    "name": "paysera/fork-sonata-project-classification-bundle",
     "type": "symfony-bundle",
     "description": "Symfony SonataClassificationBundle",
     "keywords": [
